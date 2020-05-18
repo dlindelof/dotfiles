@@ -23,3 +23,5 @@ alias gp='gnuplot'
 
 alias sai='sudo apt-get install'
 
+alias cm='chezmoi'
+
