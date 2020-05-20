@@ -13,6 +13,10 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+if [ -d "$HOME/.vim/pack/minpac/start/fzf/bin" ] ; then
+    PATH="$HOME/.vim/pack/minpac/start/fzf/bin:$PATH"
+fi
+
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
