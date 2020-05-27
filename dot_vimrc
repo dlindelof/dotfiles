@@ -118,6 +118,7 @@ let blogit_format='pandoc --from markdown --to html --no-wrap'
 
 
 
+" map %% to current buffer's directory
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 " Manage plugins with minpac
@@ -132,7 +133,18 @@ call minpac#add('junegunn/fzf')
 nnoremap <C-p> :<C-u>FZF<CR>
 
 call minpac#add('tpope/vim-scriptease', {'type': 'opt'})
+
+" Pencil for prose writing
 call minpac#add('reedes/vim-pencil')
+
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init()
+  autocmd FileType text         call pencil#init()
+  autocmd FileType asciidoc     call pencil#init()
+augroup END
+
+
 call minpac#add('tpope/vim-dispatch')
 call minpac#add('alfredodeza/pytest.vim')
 
