@@ -135,6 +135,7 @@ nnoremap <C-p> :<C-u>FZF<CR>
 call minpac#add('tpope/vim-scriptease', {'type': 'opt'})
 
 " Pencil for prose writing
+" See https://github.com/reedes/vim-pencil
 call minpac#add('reedes/vim-pencil')
 
 augroup pencil
