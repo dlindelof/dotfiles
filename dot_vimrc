@@ -121,13 +121,20 @@ let blogit_format='pandoc --from markdown --to html --no-wrap'
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 " Manage plugins with minpac
+" Install this first by cloning k-takata/minpac in .vim/pack/minpac/opt
 packadd minpac
 call minpac#init()
 
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('tpope/vim-unimpaired')
+call minpac#add('tpope/vim-projectionist')
 call minpac#add('junegunn/fzf')
+nnoremap <C-p> :<C-u>FZF<CR>
+
 call minpac#add('tpope/vim-scriptease', {'type': 'opt'})
+call minpac#add('reedes/vim-pencil')
+call minpac#add('tpope/vim-dispatch')
+call minpac#add('alfredodeza/pytest.vim')
 
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
