@@ -84,4 +84,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-if [[ -x 
+# have a cow say a fortune
+if [ -x $(command -v cowsay ] && [ -x $(command -v fortune) ]; then
+    fortune | cowsay -f small
+fi
+
