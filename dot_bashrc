@@ -86,6 +86,6 @@ unset __conda_setup
 
 # have a cow say a fortune
 if [ -x $(command -v cowsay) ] && [ -x $(command -v fortune) ]; then
-    fortune | cowsay -f small
+    fortune softwareengineering | cowsay -f small
 fi
 
