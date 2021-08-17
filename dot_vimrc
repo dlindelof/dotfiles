@@ -162,4 +162,6 @@ augroup END
 " Use with :Make or :Dispatch
 call minpac#add('tpope/vim-dispatch')
 
+" Run `chezmoi apply` when a dotfile managed by `chezmoi` is modified
+autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %
 
