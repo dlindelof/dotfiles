@@ -171,6 +171,9 @@ let g:grepper.tools = ['grep', 'git', 'rg']
 call minpac#add('janko-m/vim-test')
 let test#strategy = 'dispatch'
 
+" Obsession
+call minpac#add('tpope/vim-obsession')
+
 
 " Run `chezmoi apply` when a dotfile managed by `chezmoi` is modified
 autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %
