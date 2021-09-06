@@ -116,6 +116,7 @@ set foldmethod=indent
 
 let blogit_format='pandoc --from markdown --to html --no-wrap'
 
+set undofile
 
 
 " map %% to current buffer's directory
